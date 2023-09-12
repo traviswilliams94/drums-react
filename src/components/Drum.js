@@ -9,16 +9,16 @@ function Drum({letter, sound}) {
 
 		setTimeout(() => {
 			setPlaying(false);
-		}, 150);
+		}, 100);
 	};
 
 	useEffect(() => {
 		document.addEventListener("keydown", (e) => {
-			if (e.key === letter) {
+			if (e.key.toLowerCase() === letter.toLowerCase()) {
 				play();
 			}
 		});
-	}, []);
+	}, [letter, play]);
 
 	return (
 		<div className={`drum ${playing ? "playing" : ""}`} onClick={play}>

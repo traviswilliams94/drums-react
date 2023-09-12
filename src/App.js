@@ -1,52 +1,61 @@
 import {useState} from "react";
 import Drum from "./components/Drum";
+import boom from './sounds/boom.wav';
+import clap from './sounds/clap.wav';
+import hihat from './sounds/hihat.wav';
+import kick from './sounds/kick.wav';
+import openhat from './sounds/openhat.wav';
+import ride from './sounds/ride.wav';
+import snare from './sounds/snare.wav';
+import tink from './sounds/tink.wav';
+import tom from './sounds/tom.wav';
 
 function App() {
 
   const [sounds, setSounds] = useState([
-    {
-      name: 'boom',
-      sound: require('./sounds/boom.wav').default,
-      key: "A",
-    },
-    {
+		{
+			name: "boom",
+			sound: boom,
+			key: "A",
+		},
+		{
 			name: "clap",
-			sound: require("./sounds/clap.wav").default,
+			sound: clap,
 			key: "S",
 		},
 		{
 			name: "hihat",
-			sound: require("./sounds/hihat.wav").default,
+			sound: hihat,
 			key: "D",
 		},
 		{
 			name: "kick",
-			sound: require("./sounds/kick.wav").default,
+			sound: kick,
 			key: "F",
 		},
 		{
 			name: "openhat",
-			sound: require("./sounds/openhat.wav").default,
+			sound: openhat,
 			key: "G",
 		},
 		{
 			name: "ride",
-			sound: require("./sounds/ride.wav").default,
+			sound: ride,
 			key: "H",
 		},
 		{
 			name: "snare",
-			sound: require("./sounds/snare.wav").default,
+			sound: snare,
 			key: "J",
 		},
 		{
 			name: "tink",
-			sound: require("./sounds/tink.wav").default,
+			sound: tink,
 			key: "K",
 		},
 		{
 			name: "tom",
-			sound: require("./sounds/tom.wav").default,
+			sound: tom,
 			key: "L",
 		},
   ]);
